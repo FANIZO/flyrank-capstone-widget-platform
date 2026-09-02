@@ -67,7 +67,7 @@ capstone.yaml        evaluator manifest
 Requirements: Docker Desktop and Docker Compose. No credit card or cloud account is required.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/flyrank-capstone-widget-platform.git
+git clone https://github.com/FANIZO/flyrank-capstone-widget-platform.git
 cd flyrank-capstone-widget-platform
 docker compose up --build
 ```
@@ -150,6 +150,31 @@ docker compose exec app pytest -q
 ```
 
 The suite covers authentication, tenant isolation, caching, CORS preflight, malformed/oversized input, idempotency, dashboard visibility, honeypot spam, rate limiting, geo fallback, and side-effect failure.
+
+Latest verified result:
+
+```text
+......                                                                   [100%]
+6 passed in 4.34s
+```
+
+## Demonstration evidence
+
+### Widget rendered and submission accepted on the second origin
+
+![Successful embedded widget submission](evidence/01-widget-success.png)
+
+### Stored lead visible to its authenticated owner
+
+![Lead visible in dashboard](evidence/02-dashboard-submission.png)
+
+### Owner-only aggregate statistics
+
+![Dashboard statistics](evidence/03-dashboard-stats.png)
+
+### Complete automated acceptance suite
+
+![Six acceptance tests passed](evidence/04-tests-passed.png)
 
 ## Submission documents
 
